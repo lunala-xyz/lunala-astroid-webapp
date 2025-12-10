@@ -5,25 +5,21 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from '@/components/ui/navigation-menu'
-</script>
+import {ref} from "vue";
 
+const navItems = ref([
+  {text: 'Home', link: '/'},
+  {text: 'About', link: '/about'},
+  {text: 'Source', link: 'https://github.com/Lunala-Studio/Lunala-Astro'},
+]);
+</script>
 
 <template>
   <NavigationMenu>
     <NavigationMenuList>
-      <NavigationMenuItem>
-        <NavigationMenuLink href="/">
-          Home
-        </NavigationMenuLink>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <NavigationMenuLink href="/about">
-          About
-        </NavigationMenuLink>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <NavigationMenuLink href="https://github.com/Lunala-Studio/Lunala-Astro">
-          Source
+      <NavigationMenuItem v-for="item in navItems">
+        <NavigationMenuLink :href="item.link">
+          {{item.text}}
         </NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>

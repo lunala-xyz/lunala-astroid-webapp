@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import ModeToggle from '@/components/ModeToggle.vue';
 import Navbar from "@/components/Navbar.vue";
 interface Props {
     title: string;
@@ -37,7 +36,6 @@ const { title } = Astro.props;
     <header>
         <nav>
             <Navbar client:load/>
-            <ModeToggle client:load/>
         </nav>
     </header>
     <main>
