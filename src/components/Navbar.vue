@@ -6,6 +6,7 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu'
 import {ref} from "vue";
+import ModeToggle from "@/components/ModeToggle.vue";
 
 const navItems = ref([
   {text: 'Home', link: '/'},
@@ -17,11 +18,12 @@ const navItems = ref([
 <template>
   <NavigationMenu>
     <NavigationMenuList>
-      <NavigationMenuItem v-for="item in navItems">
-        <NavigationMenuLink :href="item.link">
+      <NavigationMenuItem v-for="item in navItems" :key="item.text">
+        <NavigationMenuLink :href="item.link" class="text-primary">
           {{item.text}}
         </NavigationMenuLink>
       </NavigationMenuItem>
     </NavigationMenuList>
+    <ModeToggle/>
   </NavigationMenu>
 </template>
