@@ -11,7 +11,9 @@ import ModeToggle from "@/components/ModeToggle.vue";
 const navItems = ref([
   {text: 'Home', link: '/'},
   {text: 'About', link: '/about'},
-  {text: 'Source', link: 'https://github.com/Lunala-Studio/Lunala-Astro'},
+  {text: 'Projects', link: '/projects'},
+  {text: 'Blog', link: '/blog'},
+  {text: 'Source', link: 'https://github.com/lunala-xyz'},
 ]);
 </script>
 
