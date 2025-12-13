@@ -18,14 +18,18 @@ const navItems = ref([
 </script>
 
 <template>
-  <NavigationMenu>
-    <NavigationMenuList>
-      <NavigationMenuItem v-for="item in navItems" :key="item.text">
-        <NavigationMenuLink :href="item.link" class="text-primary">
-          {{item.text}}
-        </NavigationMenuLink>
-      </NavigationMenuItem>
-    </NavigationMenuList>
-    <ModeToggle/>
-  </NavigationMenu>
+  <div class="flex w-full justify-center">
+    <NavigationMenu class="flex w-full justify-between items-center">
+      <div class="flex flex-1 justify-center">
+        <NavigationMenuList>
+          <NavigationMenuItem v-for="item in navItems" :key="item.text">
+            <NavigationMenuLink :href="item.link" class="text-primary">
+              {{item.text}}
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </div>
+    </NavigationMenu>
+      <ModeToggle/>
+  </div>
 </template>
