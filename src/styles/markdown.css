@@ -20,3 +20,15 @@
 .prose h6 {
     @apply mt-5;
 }
+
+.prose table {
+    @apply table w-full border-collapse my-4 text-left;
+}
+
+.prose th {
+    @apply border border-gray-300 px-4 py-2 bg-gray-100 font-semibold;
+}
+
+.prose td {
+    @apply border border-gray-300 px-4 py-2;
+}
