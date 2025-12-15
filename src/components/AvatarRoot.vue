@@ -11,31 +11,31 @@ const click = function sendToGithub(username: string) {
 }
 
 const teamMembers = [{
-  avatar: "https://github.com/MineKID-LP.png",
-  alt: "minekid-lp", fallback: "MK",
+  username: "MineKID-LP",
+  fallback: "MK",
 }, {
-  avatar: "https://github.com/YannickMyxe.png",
-  alt: "YannickMyxe", fallback: "Yan",
+  username: "YannickMyxe",
+  fallback: "Yan",
 }, {
-  avatar: "https://github.com/Gameboys360.png",
-  alt: "Gameboys360", fallback: "GB",
+  username: "Gameboys360",
+  fallback: "GB",
 },
 ];
 </script>
 
 <template>
   <div class="flex flex-row flex-wrap items-center gap-4">
-    <div v-for="member in teamMembers" :key=member.alt>
-      <TooltipProvider>
+    <div v-for="member in teamMembers" :key=member.username>
+      <TooltipProvider @click="click(member.username)">
         <Tooltip>
           <TooltipTrigger as-child>
             <Avatar>
-              <AvatarImage :src="member.avatar" :alt="member.alt"/>
+              <AvatarImage :src="'https://github.com/' + member.username + '.png'" :alt="member.username"/>
               <AvatarFallback>{{ member.fallback }}</AvatarFallback>
             </Avatar>
           </TooltipTrigger>
           <TooltipContent>
-            {{member.alt}}
+            {{ member.username }}
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>
