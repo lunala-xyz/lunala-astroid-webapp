@@ -13,17 +13,17 @@ const navItems = ref([
   {text: 'About', link: '/about'},
   {text: 'Projects', link: '/projects'},
   {text: 'Blog', link: '/blog'},
-  {text: 'Source', link: 'https://github.com/lunala-xyz'},
+  {text: 'Source', link: 'https://github.com/lunala-xyz', blank: true},
 ]);
 </script>
 
 <template>
-  <div class="flex w-full justify-between items-center px-4 bg-secondary py-3">
-    <a href="/" class="text-lg font-bold text-accent-foreground">lunala</a>
+  <div class="flex w-full justify-between items-center px-5 bg-secondary py-3">
+    <a href="/" class="text-lg font-bold text-accent-foreground">Lunala</a>
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem v-for="item in navItems" :key="item.text">
-          <NavigationMenuLink :href="item.link" class="text-primary">
+          <NavigationMenuLink :href="item.link" class="text-primary" :blank="item.blank">
             {{item.text}}
           </NavigationMenuLink>
         </NavigationMenuItem>
