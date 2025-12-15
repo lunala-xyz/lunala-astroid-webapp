@@ -17,12 +17,12 @@ import {Button} from "@/components/ui/button";
 import {ArrowLeftIcon, FolderGit2Icon} from "lucide-vue-next";
 ---
 <Main title={project.data.slug}>
-    <div>
+    <div class="flex justify-between">
         <Button variant="outline" class="m-5">
             <ArrowLeftIcon/>
             <a href="../projects"> Back to project overview</a>
         </Button>
-        <Button variant="outline" class="m-5">
+        <Button class="m-5">
             <FolderGit2Icon/>
             <a href={project.data.url} target="_blank"> View source on GitHub</a>
         </Button>
