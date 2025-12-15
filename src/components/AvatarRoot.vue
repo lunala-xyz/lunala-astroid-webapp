@@ -10,22 +10,14 @@ function sendToGithub(username: string) {
   window.open(`https://github.com/${username}`, '_blank');
 }
 
-const teamMembers = [{
-  username: "MineKID-LP",
-  fallback: "MK",
-}, {
-  username: "YannickMyxe",
-  fallback: "Yan",
-}, {
-  username: "Gameboys360",
-  fallback: "GB",
-},
-];
+const props = defineProps<{
+  teamMembers: Array<TeamMember>,
+}>();
 </script>
 
 <template>
   <div class="flex flex-row flex-wrap items-center gap-4">
-    <div v-for="member in teamMembers" :key=member.username>
+    <div v-for="member in props.teamMembers" :key=member.username>
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger as-child @click="sendToGithub(member.username)">
