@@ -9,7 +9,7 @@ const props = defineProps<{
 
 <template>
   <TooltipProvider>
-    <div class="flex flex-row flex-wrap items-center gap-4">
+    <div class="flex flex-row flex-wrap items-center gap-4 mt-1 mb-3">
       <div v-for="member in props.teamMembers" :key=member.username>
         <Tooltip :delay-duration="100">
           <TooltipTrigger as-child>
