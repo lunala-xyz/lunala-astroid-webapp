@@ -1,0 +1,34 @@
+<script setup lang="ts">
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from '@/components/ui/navigation-menu'
+import {ref} from "vue";
+import ModeToggle from "@/components/ModeToggle.vue";
+
+const navItems = ref([
+  {text: 'Home', link: '/'},
+  {text: 'About', link: '/about'},
+  {text: 'Projects', link: '/projects'},
+  {text: 'Blog', link: '/blog'},
+  {text: 'Source', link: 'https://github.com/lunala-xyz'},
+]);
+</script>
+
+<template>
+  <div class="flex w-full justify-between items-center px-4 bg-secondary py-3">
+    <a href="/" class="text-lg font-bold text-accent-foreground">lunala</a>
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem v-for="item in navItems" :key="item.text">
+          <NavigationMenuLink :href="item.link" class="text-primary">
+            {{item.text}}
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+    <ModeToggle/>
+  </div>
+</template>
