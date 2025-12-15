@@ -1,14 +1,14 @@
 ﻿---
 import Main from "@/layouts/main.astro";
-import { getCollection, getEntry } from 'astro:content';
-const allBlogPosts = await getCollection('blog');
+import { getCollection } from 'astro:content';
+const projects = await getCollection('project');
 ---
 
 <Main title="Projects Overview">
     <h1 class="text-3xl text-accent-foreground">Project Overview</h1>
     <ul>
-        {allBlogPosts.map(post => (
-                <li><a href={`/projects/${post.id}`}>{post.data.title}</a></li>
+        {projects.map(project => (
+                <li><a href={`/projects/${project.id}`}>{project.data.title}</a></li>
         ))}
     </ul>
 </Main>
