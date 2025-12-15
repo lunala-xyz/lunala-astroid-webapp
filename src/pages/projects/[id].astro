@@ -14,9 +14,12 @@ const {Content} = await render(project);
 
 import Main from "@/layouts/main.astro";
 import {Button} from "@/components/ui/button";
+import {ArrowLeftIcon} from "lucide-vue-next";
 ---
 <Main title={project.data.slug}>
-    <Button variant="outline" class="m-5"><a href="../projects">Back to project overview</a></Button>
+    <Button variant="outline" class="m-5">
+        <ArrowLeftIcon  />
+        <a href="../projects"> Back to project overview</a></Button>
     <div class="max-w-xl mx-auto mb-10">
         <Content/>
     </div>
