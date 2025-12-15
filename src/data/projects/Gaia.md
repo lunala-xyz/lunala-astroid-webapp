@@ -2,6 +2,7 @@
 title: Gaia
 description: "Gaia is a minecraft mod"
 slug: "gaia"
+url: "https://github.com/lunala-xyz/Gaia"
 ---
 
 # Gaia
