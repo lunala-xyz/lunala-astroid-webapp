@@ -3,15 +3,22 @@ import '../styles/global.css';
 import Main from "../layouts/main.astro";
 // Component Imports
 import {Button} from "@/components/ui/button"
+import AvatarRoot from "@/components/AvatarRoot.vue";
+import {ExternalLinkIcon} from "lucide-vue-next";
 ---
 
 <Main title="Lunala">
-    <div class="grid place-items-center content-center">
+    <div class="max-w-5xl mx-auto">
+        <div class="grid place-items-center">
         <h1 class="text-5xl text-accent-foreground my-5">Lunala Studio's</h1>
         <p class="max-w-3/5">Welcome to the Lunala Studio's home page. We are a small group of developers dedicated to creating software including minecraft mods.</p>
         <Button variant="secondary" class="my-5">
             <a href="https://github.com/lunala-xyz" target="_blank">Check our projects on github!</a>
+            <ExternalLinkIcon />
         </Button>
+        </div>
+        <h2 class="text-2xl">Meet the team</h2>
+        <AvatarRoot client:load />
     </div>
 </Main>
 
