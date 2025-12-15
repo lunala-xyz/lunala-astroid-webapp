@@ -18,8 +18,8 @@ const navItems = ref([
 </script>
 
 <template>
-  <div class="flex w-full justify-between items-center px-4 bg-secondary py-3">
-    <a href="/" class="text-lg font-bold text-accent-foreground">lunala</a>
+  <div class="flex w-full justify-between items-center px-5 bg-secondary py-3">
+    <a href="/" class="text-lg font-bold text-accent-foreground">Lunala</a>
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem v-for="item in navItems" :key="item.text">
