@@ -13,7 +13,7 @@ const navItems = ref([
   {text: 'About', link: '/about'},
   {text: 'Projects', link: '/projects'},
   {text: 'Blog', link: '/blog'},
-  {text: 'Source', link: 'https://github.com/lunala-xyz'},
+  {text: 'Source', link: 'https://github.com/lunala-xyz', blank: true},
 ]);
 </script>
 
@@ -23,7 +23,7 @@ const navItems = ref([
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem v-for="item in navItems" :key="item.text">
-          <NavigationMenuLink :href="item.link" class="text-primary">
+          <NavigationMenuLink :href="item.link" class="text-primary" :blank="item.blank">
             {{item.text}}
           </NavigationMenuLink>
         </NavigationMenuItem>
