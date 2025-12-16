@@ -26,10 +26,10 @@ const teamMembers: Array<TeamMemberExtended> = [{
 ];
 ---
 
-<Main title="Lunala">
+<Main title="Lunala studio's">
     <div class="max-w-5xl mx-auto">
         <div class="grid place-items-center">
-        <h1 class="text-5xl text-accent-foreground my-5">Lunala Studio's</h1>
+        <h1 class="text-5xl text-accent-foreground mt-10 mb-5">Lunala Studio's</h1>
         <p class="max-w-3/5">Welcome to the Lunala Studio's home page. We are a small group of developers dedicated to creating software including minecraft mods.</p>
         <Button variant="secondary" class="my-5">
             <a href="https://github.com/lunala-xyz" target="_blank">Check our projects on github!</a>
@@ -37,6 +37,7 @@ const teamMembers: Array<TeamMemberExtended> = [{
         </Button>
         </div>
         <h2 class="text-2xl">Meet the team</h2>
+        <p class="mb-3 text-primary/75">Meet our team members, click on their profile pictures to go to their github account.</p>
         {teamMembers.map(member => (
             <TeamMemberCard member={member} client:load class="mb-5" />
         ))}

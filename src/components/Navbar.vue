@@ -10,7 +10,7 @@ import ModeToggle from "@/components/ModeToggle.vue";
 
 const navItems = ref([
   {text: 'Home', link: '/'},
-  {text: 'About', link: '/about'},
+  // {text: 'About', link: '/about'},
   {text: 'Projects', link: '/projects'},
   {text: 'Blog', link: '/blog'},
   {text: 'Source', link: 'https://github.com/lunala-xyz', blank: true},
