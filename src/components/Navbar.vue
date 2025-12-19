@@ -19,7 +19,7 @@ const navItems = ref([
 
 <template>
   <div class="flex w-full justify-between items-center px-5 bg-secondary py-3">
-    <a href="/" class="text-lg font-bold text-accent-foreground">Lunala</a>
+    <a href="/lunala-astroid-webapp" class="text-lg font-bold text-accent-foreground">Lunala</a>
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem v-for="item in navItems" :key="item.text">
