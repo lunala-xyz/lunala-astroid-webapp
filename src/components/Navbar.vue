@@ -9,10 +9,10 @@ import {ref} from "vue";
 import ModeToggle from "@/components/ModeToggle.vue";
 
 const navItems = ref([
-  {text: 'Home', link: '/'},
+  {text: 'Home', link: '/lunala-astroid-webapp'},
 //{text: 'About', link: '/about'},
-  {text: 'Projects', link: '/projects'},
-  {text: 'Blog', link: '/blog'},
+  {text: 'Projects', link: '/lunala-astroid-webapp/projects'},
+  {text: 'Blog', link: '/lunala-astroid-webapp/blog'},
   {text: 'Source', link: 'https://github.com/lunala-xyz', blank: true},
 ]);
 </script>
