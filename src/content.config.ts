@@ -9,7 +9,7 @@ import { z } from 'astro/zod';
 
 // 4. Define your collection(s)
 const project = defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./src/data/projects" }),
+    loader: glob({ pattern: "**/*.md", base: "/lunala-astroid-webapp/src/data/projects" }),
     schema: z.object({
         title: z.string(),
         description: z.string(),
@@ -20,7 +20,7 @@ const project = defineCollection({
 });
 
 const blog = defineCollection({
-    loader: glob({ pattern: "**/*.md", base: "./src/data/blogs" }),
+    loader: glob({ pattern: "**/*.md", base: "/lunala-astroid-webapp/src/data/blogs" }),
     schema: z.object({
         title: z.string(),
         description: z.string(),
