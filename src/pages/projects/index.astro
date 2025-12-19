@@ -1,9 +1,9 @@
 ﻿---
 import Main from "@/layouts/main.astro";
-import {getCollection} from 'astro:content';
+import {type CollectionEntry, getCollection} from 'astro:content';
 import ProjectCard from "@/components/ProjectCard.astro";
 
-const projects = await getCollection('project');
+const projects: CollectionEntry<'project'>[] = await getCollection('project');
 ---
 
 <Main title="Projects Overview">
