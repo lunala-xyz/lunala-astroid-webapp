@@ -1,0 +1,19 @@
+﻿---
+import Main from "@/layouts/main.astro";
+import {type CollectionEntry, getCollection} from 'astro:content';
+
+const blogs: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
+    (a, b) => b.data.created_at.getTime() - a.data.created_at.getTime()
+);
+---
+
+<Main title="Blogs">
+    <div class="max-w-5xl mx-auto">
+        <h1 class="text-3xl text-accent-foreground mt-5">Blog Overview</h1>
+        <div class="grid grid-cols-2 gap-5 mt-10">
+            {blogs.map(blog => (
+                   <span>{blog.data.title}</span>
+            ))}
+        </div>
+    </div>
+</Main>
