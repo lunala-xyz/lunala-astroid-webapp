@@ -11,6 +11,9 @@ export default defineConfig({
         plugins: [tailwindcss()],
     },
 
+    site: 'https://lunala-xyz.github.io',
+    base: '/lunala-astroid-webapp',
+
     integrations: [vue()],
 
     markdown: {
