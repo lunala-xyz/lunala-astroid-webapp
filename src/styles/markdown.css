@@ -41,3 +41,8 @@
 .prose a {
     @apply text-fuchsia-500 hover:text-pink-400 underline;
 }
+
+.prose .astro-code {
+    border-radius: 3px;
+    @apply px-3 py-1 my-1 rounded-md;
+}
