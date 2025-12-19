@@ -1,0 +1,36 @@
+﻿---
+import type {CollectionEntry} from 'astro:content';
+interface Props {
+    blog: CollectionEntry<'blog'>;
+}
+
+// `post` will match your 'blog' collection schema type
+const {blog} = Astro.props;
+
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card'
+import {Button} from "@/components/ui/button";
+import {BookOpenIcon} from "lucide-vue-next";
+---
+
+<Card>
+    <CardHeader>
+        <CardTitle class="text-accent-foreground text-2xl">{blog.data.title}</CardTitle>
+    </CardHeader>
+    <CardContent>
+        <p>{blog.data.description}</p>
+    </CardContent>
+    <CardFooter>
+        <p class="text-primary/50 w-full">Created at: {blog.data.created_at.toDateString()}</p>
+        <Button variant="secondary" class="mb-0">
+            <BookOpenIcon/>
+            <a href={`/projects/${blog.data.slug}`}>View blog</a>
+        </Button>
+    </CardFooter>
+</Card>
