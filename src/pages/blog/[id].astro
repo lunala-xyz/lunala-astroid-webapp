@@ -1,6 +1,6 @@
 ﻿---
 import {type CollectionEntry, getCollection, render} from 'astro:content';
-import {ArrowLeftIcon, FolderGit2Icon} from "lucide-vue-next";
+import {ArrowLeftIcon} from "lucide-vue-next";
 import {Button} from "@/components/ui/button";
 import Main from "@/layouts/main.astro";
 // 1. Generate a new path for every collection entry
@@ -21,10 +21,6 @@ const {Content} = await render(blog);
         <Button variant="outline" class="m-5">
             <ArrowLeftIcon/>
             <a href="../blog"> Back to project overview</a>
-        </Button>
-        <Button class="m-5">
-            <FolderGit2Icon/>
-            <a href={blog.data.url} target="_blank"> View source on GitHub</a>
         </Button>
     </div>
     <div class="prose max-w-xl mx-auto mb-10">
