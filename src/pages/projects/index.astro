@@ -1,0 +1,20 @@
+﻿---
+import Main from "@/layouts/main.astro";
+import {type CollectionEntry, getCollection} from 'astro:content';
+import ProjectCard from "@/components/ProjectCard.astro";
+
+const projects: CollectionEntry<'project'>[] = (await getCollection('project')).sort(
+    (a, b) => b.data.created_at.getTime() - a.data.created_at.getTime()
+);
+---
+
+<Main title="Projects Overview">
+    <div class="max-w-5xl mx-auto">
+        <h1 class="text-3xl text-accent-foreground mt-5">Project Overview</h1>
+        <div class="grid grid-cols-2 gap-5 mt-10">
+            {projects.map(project => (
+                    <ProjectCard project={project}/>
+            ))}
+        </div>
+    </div>
+</Main>

@@ -1,8 +1,9 @@
 ---
 import '../styles/global.css';
+import '../styles/markdown.css';
 import Navbar from "@/components/Navbar.vue";
 interface Props {
-    title: string;
+	title: string;
 }
 const { title } = Astro.props;
 ---
@@ -39,7 +40,9 @@ const { title } = Astro.props;
         </nav>
     </header>
     <main>
-		<slot />
+		<div>
+			<slot />
+		</div>
     </main>
     <footer></footer>
 	</body>
