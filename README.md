@@ -10,10 +10,6 @@
 [![GitHub license](https://img.shields.io/github/license/lunala-xyz/lunala-astroid-webapp?style=for-the-badge)](LICENSE) <!-- TODO: Add actual license -->
 
 **The official website for Lunala, built with Astro and powered by Vue.js.**
-
-[Live Demo](https://demo-link.com) <!-- TODO: Add live demo link --> |
-[Documentation](https://docs-link.com) <!-- TODO: Add external documentation link if available -->
-
 </div>
 
 ## 📖 Overview
