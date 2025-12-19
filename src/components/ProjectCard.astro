@@ -20,8 +20,10 @@ import {BookOpenIcon} from "lucide-vue-next";
 ---
 
 <Card>
+    <CardHeader>
+        <CardTitle class="text-accent-foreground text-2xl">{project.data.title}</CardTitle>
+    </CardHeader>
     <CardContent>
-        <h2 class="mb-3 text-accent-foreground text-xl">{project.data.title}</h2>
         <p>{project.data.description}</p>
     </CardContent>
     <CardFooter>
