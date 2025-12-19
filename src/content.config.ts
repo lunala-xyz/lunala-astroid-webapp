@@ -15,6 +15,7 @@ const project = defineCollection({
         description: z.string(),
         slug: z.string(),
         url: z.string(),
+        created_at: z.date(),
     })
 });
 

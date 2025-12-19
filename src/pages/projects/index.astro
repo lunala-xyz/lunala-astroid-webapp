@@ -3,7 +3,9 @@ import Main from "@/layouts/main.astro";
 import {type CollectionEntry, getCollection} from 'astro:content';
 import ProjectCard from "@/components/ProjectCard.astro";
 
-const projects: CollectionEntry<'project'>[] = await getCollection('project');
+const projects: CollectionEntry<'project'>[] = (await getCollection('project')).sort(
+    (a, b) => b.data.created_at.getTime() - a.data.created_at.getTime()
+);
 ---
 
 <Main title="Projects Overview">

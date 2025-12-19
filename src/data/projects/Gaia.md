@@ -3,6 +3,7 @@ title: Gaia
 description: "The gaia project, a programming language that is the culmination of everything learned from Lynx, Lunala, and Atlas."
 slug: "gaia"
 url: "https://github.com/lunala-xyz/Gaia"
+created_at: 2025-12-10
 ---
 
 # Gaia
