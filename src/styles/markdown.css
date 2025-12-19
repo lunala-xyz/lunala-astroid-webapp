@@ -46,3 +46,7 @@
     border-radius: 3px;
     @apply px-3 py-1 my-1 rounded-md;
 }
+
+.prose p {
+    @apply mb-2;
+}

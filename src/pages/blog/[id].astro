@@ -1,0 +1,30 @@
+﻿---
+import {type CollectionEntry, getCollection, render} from 'astro:content';
+import {ArrowLeftIcon} from "lucide-vue-next";
+import {Button} from "@/components/ui/button";
+import Main from "@/layouts/main.astro";
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+    const blog: CollectionEntry<'blog'>[] = await getCollection('blog');
+    return blog.map(post => ({
+        params: {id: post.id},
+        props: {post},
+    }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const {post: blog} = Astro.props;
+const {Content} = await render(blog);
+---
+
+<Main title={blog.data.slug}>
+    <div class="flex justify-between">
+        <Button variant="outline" class="m-5">
+            <ArrowLeftIcon/>
+            <a href="../blog"> Back to project overview</a>
+        </Button>
+    </div>
+    <div class="prose max-w-xl mx-auto mb-10">
+        <p class="text-primary/50">Created on: {blog.data.created_at.toDateString()}</p>
+        <Content/>
+    </div>
+</Main>
