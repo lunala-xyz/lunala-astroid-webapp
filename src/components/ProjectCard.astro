@@ -27,6 +27,7 @@ import {BookOpenIcon} from "lucide-vue-next";
         <p>{project.data.description}</p>
     </CardContent>
     <CardFooter>
+        <p class="text-primary/50 w-full">Created at: {project.data.created_at.toDateString()}</p>
         <Button variant="secondary" class="mb-0">
             <BookOpenIcon/>
             <a href={`/projects/${project.data.slug}`}>View project</a>
