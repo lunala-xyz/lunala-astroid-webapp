@@ -6,6 +6,7 @@ import {Button} from "@/components/ui/button"
 import TeamAvatars from "@/components/TeamAvatars.vue";
 import TeamMemberCard from "@/components/TeamMemberCard.vue";
 import {ExternalLinkIcon} from "lucide-vue-next";
+import RevenueGraph from "@/components/RevenueGraph.astro";
 
 const teamMembers: Array<TeamMemberExtended> = [{
     username: "MineKID-LP",
@@ -41,6 +42,10 @@ const teamMembers: Array<TeamMemberExtended> = [{
         {teamMembers.map(member => (
             <TeamMemberCard member={member} client:load class="mb-5" />
         ))}
+
+        <div class="my-5">
+            <RevenueGraph />
+        </div>
     </div>
 </Main>
 
