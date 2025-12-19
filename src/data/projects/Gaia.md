@@ -1,6 +1,6 @@
 ﻿---
 title: Gaia
-description: "Gaia is a minecraft mod"
+description: "The gaia project, a programming language that is the culmination of everything learned from Lynx, Lunala, and Atlas."
 slug: "gaia"
 url: "https://github.com/lunala-xyz/Gaia"
 ---
@@ -19,8 +19,8 @@ I haven't gotten it to break break yet, atleast nothing I could not fix.<br>
 Besides that I'm sure the spec isn't fully working yet? Idk I don't remember what I've done and what not.
 
 ## This is Gaia
-`fibonacci.gaia`
-```
+Fibonacci example in gaia: 
+```js
 const n = 100;
 let a = 0;
 let b = 1;
